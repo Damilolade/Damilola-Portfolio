@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import {Route, createBrowserRouter, RouterProvider, createRoutesFromElements} from 'react-router-dom';
-import RootLayout from './layout/Rootlayout';
+import RootLayout from './layout/RootLayout';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import About from './pages/About';
