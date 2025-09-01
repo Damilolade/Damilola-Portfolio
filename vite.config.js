@@ -1,8 +1,10 @@
+// vite.config.js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
+const isProd = process.env.NODE_ENV === "production";
+
 export default defineConfig({
   plugins: [react()],
-  base: "/Damilola-Portfolio",   // ✅ correct for Vercel
+  base: isProd ? "/Damilola-Portfolio/" : "/", 
 });
