@@ -7,7 +7,7 @@ import "./Projects.css";
 // ✅ Import images
 import Damilola from "../assets/Damilola.jpg";
 import todoimage from "../assets/todoimage.jpeg";
-import counterimage from "../assets/Counterimage.jpeg";
+import counterimage from "../assets/counterimage.jpeg";
 
 const projects = [
   {
