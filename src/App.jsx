@@ -5,7 +5,7 @@ import RootLayout from "./layout/RootLayout";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import Projects from "./components/Projects"; // ✅ fixed path
+import Projects from './pages/Projects';
 
 const App = () => {
   const router = createBrowserRouter(
