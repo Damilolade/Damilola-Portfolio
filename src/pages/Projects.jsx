@@ -4,18 +4,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Projects.css";
 
-// ✅ Import images
-import Damilola from "../assets/Damilola.jpg";
-import todoimage from "../assets/todoimage.jpeg";
-import counterImage from "../assets/counterImage.jpeg";
-
+// ✅ Import images (all lowercase filenames)
+import damilola from "../assets/damilola.jpg";
+import todoimage from "../assets/todoimage.jpg";
+import counterimage from "../assets/counterimage.jpg";
 
 const projects = [
   {
     title: "My Portfolio",
     description:
       "My personal portfolio website highlighting my skills, projects, and achievements.",
-    image: Damilola,
+    image: damilola,
     link: "https://myportfolio.com",
     tech: ["React", "Framer Motion", "CSS"],
   },
@@ -31,7 +30,7 @@ const projects = [
     title: "Counter App",
     description:
       "A basic counter application demonstrating React state management and interactivity.",
-    image: counterImage,
+    image: counterimage,
     link: "https://counter-app-mjlk.vercel.app/",
     tech: ["React", "Hooks"],
   },
