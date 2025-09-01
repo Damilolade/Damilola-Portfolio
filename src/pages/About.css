@@ -1,0 +1,114 @@
+/* About Page Layout */
+.about-page {
+  min-height: 100vh;
+  background-color: #0f0f0f; /* Dark clean background */
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+}
+
+/* Shared Card Styles */
+.about-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Profile Section */
+.profile {
+  padding: 2rem;
+}
+
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #22c55e; /* Green accent */
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+  margin-bottom: 1rem;
+}
+
+/* Text Styling */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #22c55e; /* Accent green */
+  margin-bottom: 0.5rem;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+/* Hobbies Section */
+.hobbies {
+  max-width: 700px;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .hobbies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.hobby-card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: #f1f1f1;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.hobby-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.hobby-icon {
+  width: 28px;
+  height: 28px;
+  color: #22c55e;
+  margin-bottom: 0.5rem;
+}
+
+.hobby-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.hobby-desc {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
