@@ -7,7 +7,7 @@ import "./Projects.css";
 // ✅ Import images
 import Damilola from "../assets/Damilola.jpg";
 import todoimage from "../assets/todoimage.jpeg";
-import counterImg from "../assets/counterimage.jpeg";
+import counterimage from "../assets/Counterimage.jpeg";
 
 const projects = [
   {
@@ -30,7 +30,7 @@ const projects = [
     title: "Counter App",
     description:
       "A basic counter application demonstrating React state management and interactivity.",
-    image: counterImg,
+    image: counterimage,
     link: "https://counter-app-mjlk.vercel.app/",
     tech: ["React", "Hooks"],
   },
