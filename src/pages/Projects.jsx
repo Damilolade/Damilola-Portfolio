@@ -4,17 +4,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Projects.css";
 
-// ✅ Import images (all lowercase filenames)
-import damilola from "../assets/damilola.jpg";
-import todoimage from "../assets/todoimage.jpg";
-import counterimage from "../assets/counterimage.jpg";
-
 const projects = [
   {
     title: "My Portfolio",
     description:
       "My personal portfolio website highlighting my skills, projects, and achievements.",
-    image: damilola,
     link: "https://myportfolio.com",
     tech: ["React", "Framer Motion", "CSS"],
   },
@@ -22,7 +16,6 @@ const projects = [
     title: "Todo App",
     description:
       "A simple yet powerful Todo application with task creation, completion, and deletion features.",
-    image: todoimage,
     link: "https://todo-app-nxdq.vercel.app/",
     tech: ["React", "CSS"],
   },
@@ -30,7 +23,6 @@ const projects = [
     title: "Counter App",
     description:
       "A basic counter application demonstrating React state management and interactivity.",
-    image: counterimage,
     link: "https://counter-app-mjlk.vercel.app/",
     tech: ["React", "Hooks"],
   },
@@ -38,7 +30,6 @@ const projects = [
     title: "Blog CMS",
     description:
       "A content management system (CMS) built with React and Node.js for managing blog posts, categories, and user roles. Focuses on scalability and security.",
-    image: null,
     link: "https://github.com/damilola-dev/blog-cms",
     tech: ["React", "Node.js", "MongoDB"],
   },
@@ -46,7 +37,6 @@ const projects = [
     title: "E-Learning Platform",
     description:
       "An online learning platform offering courses, video lectures, and progress tracking. Designed for seamless user experience and responsive layouts.",
-    image: null,
     link: "https://github.com/damilola-dev/e-learning",
     tech: ["React", "Express", "CSS", "JWT"],
   },
@@ -54,7 +44,6 @@ const projects = [
     title: "Chat Application",
     description:
       "A real-time chat application with private rooms, user authentication, and socket-based communication.",
-    image: null,
     link: "https://github.com/damilola-dev/chat-app",
     tech: ["React", "Socket.io", "Node.js"],
   },
@@ -84,13 +73,6 @@ const Projects = () => {
             data-aos="zoom-in"
             data-aos-delay={index * 150}
           >
-            {project.image && (
-              <img
-                src={project.image}
-                alt={project.title}
-                className="project-image"
-              />
-            )}
             <div className="project-content">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
