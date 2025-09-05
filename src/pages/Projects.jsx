@@ -8,9 +8,9 @@ const projects = [
   {
     title: "My Portfolio",
     description:
-      "My personal portfolio website highlighting my skills, projects, and achievements.",
-    link: "https://myportfolio.com",
-    tech: ["React", "Framer Motion", "CSS"],
+      "My personal portfolio website showcasing my projects, skills, and achievements as a frontend developer.",
+    link: "https://damilola-portfolio-j374.vercel.app/", // ✅ correct link
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
   },
   {
     title: "Todo App",

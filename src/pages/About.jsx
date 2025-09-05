@@ -28,7 +28,7 @@ const hobbiesData = [
 const Hobbies = () => {
   return (
     <div className="hobbies">
-      <h2 className="section-title">My Hobbies</h2>
+      <h2 className="section-title">My Hobbies</h2>  
       <div className="hobbies-grid">
         {hobbiesData.map((hobby, index) => {
           const Icon = hobby.icon;

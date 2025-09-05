@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.jpeg";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -8,30 +7,27 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const menuItems = [
-    { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Projects", path: "/projects" },
     { name: "Contact", path: "/contact" },
   ];
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        {/* Logo Section */}
-        <Link to="/" className="navbar-logo">
-          <img src={logo} alt="Logo" className="logo-img" />
-          <span className="logo-text">
-            Super<span className="highlight">Dami</span>.dev
-          </span>
+    <header className="header">
+      {/* Left: Logo */}
+      <div className="site-logo">
+        <Link to="/" className="logo-text">
+          Super<span className="highlight">Dami</span>.dev
         </Link>
+      </div>
 
-        {/* Desktop Menu */}
+      {/* Desktop Navbar */}
+      <nav className="navbar">
         <ul className="menu">
           {menuItems.map((item) => (
             <li key={item.name}>
               <NavLink
                 to={item.path}
-                end={item.path === "/"}
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"
                 }
@@ -41,30 +37,32 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+      </nav>
 
-        {/* Mobile Toggle */}
-        <button className="menu-toggle" onClick={toggleMenu}>
-          {isOpen ? "✖" : "☰"}
-        </button>
-      </div>
+      {/* Mobile Toggle */}
+      <button className="menu-toggle" onClick={toggleMenu}>
+        {isOpen ? "✖" : "☰"}
+      </button>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
-        <ul>
-          {menuItems.map((item) => (
-            <li key={item.name}>
-              <Link
-                to={item.path}
-                onClick={toggleMenu}
-                className="mobile-link"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+      {isOpen && (
+        <div className="mobile-menu">
+          <ul>
+            {menuItems.map((item) => (
+              <li key={item.name}>
+                <Link
+                  to={item.path}
+                  onClick={toggleMenu}
+                  className="mobile-link"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </header>
   );
 };
 
